@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Statischer Designprototyp eines Geschenke Managers">
+    <title>Geschenke & Ideen | Geschenkplan</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="app">
+                <aside class="sidebar">
+            <a href="../index.html" class="brand"><span class="brand-symbol">✳</span><span>Geschenkplan<small>Geschenke im Blick</small></span></a>
+            <div class="nav-caption">NAVIGATION</div>
+            <nav aria-label="Hauptnavigation">
+                <a href="../index.html">
+                    <span aria-hidden="true">◫</span> Übersicht
+                </a>
+                
+                <a href="personen.html">
+                    <span aria-hidden="true">♙</span> Personen
+                </a>
+                
+                <a href="person.html">
+                    <span aria-hidden="true">♡</span> Personenprofil
+                </a>
+                
+                <a href="geschenke.html" aria-current="page" class="active">
+                    <span aria-hidden="true">✧</span> Geschenke & Ideen
+                </a>
+            </nav>
+        </aside>
+        <main id="inhalt" class="content">
+            <header class="page-heading">
+                <div>
+                    <p class="kicker">GESCHENKE MANAGER</p>
+                    <h1>Geschenke & Ideen</h1>
+                    <p class="subtitle">Ideen, Geschenkstatus, Anlässe, Teilen und Empfehlungen.</p>
+                </div>
+            </header>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Geschenkideen & Status</h2>
+                </div>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Idee</th>
+                                <th>Person</th>
+                                <th>Anlass</th>
+                                <th>Status</th>
+                                <th>Offene Aufgabe</th>
+                                <th>Aktion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Konzertticket</strong><small>Text, Link, Bild hinterlegt</small></td>
+                                <td>Lena</td>
+                                <td>Geburtstag</td>
+                                <td><span class="tag amber">Offen</span></td>
+                                <td>Bestellen</td>
+                                <td><button class="btn outline small" type="button">Übernehmen</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="button-row"><a href="person.html" class="btn primary">+ Neue Idee erfassen</a><button
+                        class="btn outline" type="button">Neue Aufgabe</button></div>
+            </section>
+            <div class="columns">
+                <section class="panel">
+                    <div class="section-title">
+                        <h2>Anlässe verwalten</h2>
+                    </div>
+                    <div class="occasion"><b>Geburtstag</b><span class="tag blue">Fest</span></div>
+                    <div class="occasion"><b>Weihnachten</b><span class="tag blue">Fest</span></div>
+                    <div class="occasion"><b>Jahrestag</b><span class="tag gray">Benutzerdefiniert</span></div>
+                    <div class="form-grid"><label class="full">Weiteren Anlass anlegen <input type="text"
+                                placeholder="z. B. Hochzeit, Abschluss"></label></div>
+                    <div class="button-row"><button class="btn outline" type="button">Anlass hinzufügen</button></div>
+                </section>
+                <section class="panel">
+                    <div class="section-title">
+                        <h2>Geschenkideen teilen</h2>
+                    </div>
+                    <p class="muted">Personen auswählen, deren Ideenliste per Link freigegeben werden soll.</p>
+                        <div class="choice"><label><input type="checkbox" checked> Lena Weber</label></div>
+                        <div class="choice"><label><input type="checkbox"> Max König</label></div>
+                        <div class="choice"><label><input type="checkbox"> Sofia Braun</label></div>
+                    <label class="full-field">Freigabelink <input type="text"
+                            placeholder="Wird nach dem Erstellen angezeigt" readonly></label>
+                    <div class="button-row"><button class="btn primary" type="button">Freigabelink
+                            erstellen</button><button class="btn outline" type="button">Link kopieren</button></div>
+                </section>
+            </div>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Automatisch generierte Geschenkideen</h2><span class="tag gray">Beispielvorschläge</span>
+                </div>
+                <p class="muted">Später entstehen Vorschläge aus Interessen, bisherigen Geschenken und bereits
+                    gespeicherten
+                    Ideen.</p>
+                <div class="suggest-grid">
+                    <article><span class="tag blue">Für Lena</span>
+                        <h3>Vinyl ihrer Lieblingsband</h3>
+                        <p>Passend zum Interesse an Musik und Konzerten.</p><button class="btn outline small"
+                            type="button">Idee
+                            übernehmen</button>
+                    </article>
+                    <article><span class="tag blue">Für Max</span>
+                        <h3>Kochworkshop</h3>
+                        <p>Passend zum Interesse an Kochen und bisherigen Geschenkideen.</p><button
+                            class="btn outline small" type="button">Idee übernehmen</button>
+                    </article>
+                    <article><span class="tag blue">Für Sofia</span>
+                        <h3>Fotografie Bildband</h3>
+                        <p>Passend zum Interesse an Fotografie.</p><button class="btn outline small" type="button">Idee
+                            übernehmen</button>
+                    </article>
+                </div>
+                <div class="button-row"><button type="button" class="btn primary">Weitere Ideen generieren</button>
+                </div>
+            </section>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Vollständige Geschenkeliste</h2><span class="tag gray">HTML Gesamtansicht</span>
+                </div>
+                <p class="muted">Geschenkideen und bereits verschenkte Geschenke in einer gemeinsamen Übersicht.</p>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Person</th>
+                                <th>Geschenk</th>
+                                <th>Anlass</th>
+                                <th>Datum</th>
+                                <th>Art</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lena</td>
+                                <td>Konzertticket</td>
+                                <td>Geburtstag</td>
+                                <td>12.12.2026 geplant</td>
+                                <td><span class="tag amber">Idee</span></td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Kochbuch</td>
+                                <td>Weihnachten</td>
+                                <td>24.12.2026 geplant</td>
+                                <td><span class="tag amber">Idee, besorgt</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sofia</td>
+                                <td>Museumstickets</td>
+                                <td>Weihnachten</td>
+                                <td>24.12.2026 geplant</td>
+                                <td><span class="tag amber">Idee</span></td>
+                            </tr>
+                            <tr>
+                                <td>Lena</td>
+                                <td>Bluetooth Lautsprecher</td>
+                                <td>Weihnachten</td>
+                                <td>24.12.2025</td>
+                                <td><span class="tag green">Verschenkt</span></td>
+                            </tr>
+                            <tr>
+                                <td>Lena</td>
+                                <td>Fotobuch</td>
+                                <td>Geburtstag</td>
+                                <td>12.12.2024</td>
+                                <td><span class="tag green">Verschenkt</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="button-row"><button type="button" class="btn outline">Liste exportieren</button></div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

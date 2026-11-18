@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Statischer Designprototyp eines Geschenke Managers">
+    <title>Personenprofil | Geschenkplan</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a href="../index.html" class="brand"><span class="brand-symbol">✳</span><span>Geschenkplan<small>Geschenke im
+                        Blick</small></span></a>
+            <div class="nav-caption">NAVIGATION</div>
+            <nav aria-label="Hauptnavigation">
+                <a href="../index.html">
+                    <span aria-hidden="true">◫</span> Übersicht
+                </a>
+
+                <a href="personen.html">
+                    <span aria-hidden="true">♙</span> Personen
+                </a>
+
+                <a href="person.html" aria-current="page" class="active">
+                    <span aria-hidden="true">♡</span> Personenprofil
+                </a>
+
+                <a href="geschenke.html">
+                    <span aria-hidden="true">✧</span> Geschenke & Ideen
+                </a>
+            </nav>
+        </aside>
+
+        <main id="inhalt" class="content">
+            <header class="page-heading">
+                <div>
+                    <p class="kicker">GESCHENKE MANAGER</p>
+                    <h1>Personenprofil</h1>
+                </div><a href="personen.html" class="btn outline">Zur Personenliste</a>
+            </header>
+            <div class="profile panel">
+                <div class="avatar large purple">LW</div>
+                <div class="fill"><span class="kicker">BEISPIELPROFIL</span>
+                    <h2>Lena Weber</h2>
+                    <p>Schwester · Geburtstag am 12. Dezember</p>
+                    <p class="muted">Interessen: Konzerte, Musik, Kurzreisen</p>
+                </div><button class="btn outline" type="button">Person bearbeiten</button>
+            </div>
+            <div class="columns">
+                <section class="panel">
+                    <div class="section-title">
+                        <h2>Geschenkideen</h2><span class="tag amber">1 offen</span>
+                    </div>
+                    <article class="gift-item">
+                        <div class="item-top"><b>Konzertticket</b><span class="tag amber">Noch nicht besorgt</span>
+                        </div>
+                        <p>Geburtstag · 12. Dezember 2026</p>
+                        <p class="muted">Link: <span class="example-link">tickets.beispiel.de/konzert</span></p>
+                        <p class="muted">Bild: <span class="file-chip">ticket-vorschau.jpg</span></p>
+                        <div class="task"><span class="empty-square"></span> Tickets auswählen <span
+                                class="task-meta">offen</span>
+                        </div>
+                        <div class="task"><span class="empty-square"></span> Bestellung abschließen <span
+                                class="task-meta">offen</span></div>
+                        <div class="button-row"><button class="btn outline small" type="button">Als besorgt
+                                markieren</button><button class="btn primary small" type="button">In Geschenk
+                                umwandeln</button></div>
+                    </article>
+                </section>
+                <section class="panel">
+                    <div class="section-title">
+                        <h2>Vergangene Geschenke</h2>
+                    </div>
+                    <article class="gift-item"><b>Bluetooth Lautsprecher</b>
+                        <p>Weihnachten · 24. Dezember 2025</p><span class="tag green">Verschenkt</span>
+                    </article>
+                    <article class="gift-item"><b>Fotobuch</b>
+                        <p>Geburtstag · 12. Dezember 2024</p><span class="tag green">Verschenkt</span>
+                    </article>
+                    <button class="btn outline" type="button">Historie bearbeiten</button>
+                </section>
+            </div>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Neue Geschenkidee</h2>
+                </div>
+                <div class="form-grid"><label>Titel der Idee <input type="text" placeholder="z. B. Kochkurs"></label>
+                    <label>Anlass <select>
+                            <option>Geburtstag</option>
+                            <option>Weihnachten</option>
+                            <option>Eigener Anlass</option>
+                        </select></label>
+                    <label class="full">Beschreibung <textarea rows="2"
+                            placeholder="Idee schnell als Text festhalten"></textarea></label>
+                    <label>Link <input type="url" placeholder="https://..."></label><label>Bild <span
+                            class="fake-upload"><span>Datei auswählen</span><small>Kein Upload im
+                                Prototyp</small></span></label>
+                    <label>Status <select>
+                            <option>Noch nicht besorgt</option>
+                            <option>Besorgt</option>
+                        </select></label>
+                    <label>Offene Aufgaben <input type="text" placeholder="z. B. Farbe auswählen, bestellen"></label>
+                </div>
+                <div class="button-row"><button class="btn primary" type="button">Idee speichern</button></div>
+            </section>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Als Geschenk dokumentieren</h2>
+                </div>
+                <p class="muted">Eine bestehende Idee kann mit Anlass und Datum in die Geschenkhistorie übernommen
+                    werden.</p>
+                <div class="form-grid"><label>Geschenk <input type="text" value="Konzertticket"></label><label>Anlass
+                        <select>
+                            <option>Geburtstag</option>
+                            <option>Weihnachten</option>
+                        </select></label><label>Geschenkdatum <input type="date" value="2026-12-12"></label></div>
+                <div class="button-row"><button class="btn primary" type="button">Als Geschenk übernehmen</button></div>
+            </section>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Vergangenes Geschenk manuell hinzufügen</h2>
+                </div>
+                <div class="form-grid"><label>Geschenk <input type="text"
+                            placeholder="Bezeichnung"></label><label>Anlass
+                        <select>
+                            <option>Geburtstag</option>
+                            <option>Weihnachten</option>
+                            <option>Eigener Anlass</option>
+                        </select></label><label>Datum <input type="date"></label></div>
+                <div class="button-row"><button class="btn outline" type="button">Geschenk eintragen</button></div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

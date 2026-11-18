@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Statischer Designprototyp eines Geschenke Managers">
+    <title>Übersicht | Geschenkplan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a href="index.html" class="brand"><span class="brand-symbol">✳</span><span>Geschenkplan<small>Geschenke im Blick</small></span></a>
+            <div class="nav-caption">NAVIGATION</div>
+            <nav aria-label="Hauptnavigation">
+                <a href="index.html" aria-current="page" class="active">
+                    <span aria-hidden="true">◫</span> Übersicht
+                </a>
+                
+                <a href="pages/personen.html">
+                    <span aria-hidden="true">♙</span> Personen
+                </a>
+                
+                <a href="pages/person.html">
+                    <span aria-hidden="true">♡</span> Personenprofil
+                </a>
+                
+                <a href="pages/geschenke.html">
+                    <span aria-hidden="true">✧</span> Geschenke & Ideen
+                </a>
+            </nav>
+        </aside>
+
+        <main id="inhalt" class="content">
+            <header class="page-heading">
+                <div>
+                    <p class="kicker">GESCHENKE MANAGER</p>
+                    <h1>Übersicht</h1>
+                    <p class="subtitle">Geburtstage, Geschenkplanung und offene Aufgaben auf einen Blick.</p>
+                </div>
+            </header>
+
+            <!--Statistik TODO: Funktionalität. Notwendigkeit?-->
+            <section class="stats" aria-label="Kennzahlen">
+                <div class="panel stat">
+                    <span>Personen</span>
+                    <strong>3</strong>
+                    <small>Familie & Freunde</small>
+                </div>
+
+                <div class="panel stat">
+                    <span>Geschenkideen</span>
+                    <strong>3</strong>
+                    <small>2 noch nicht besorgt</small>
+                </div>
+
+                <div class="panel stat">
+                    <span>Offene Aufgaben</span>
+                    <strong>3</strong>
+                    <small>Beispielhafte Aufgaben</small>
+                </div>
+            </section>
+
+            <!--Ereignisübersicht TODO: Funktionalität-->
+            <div class="column">
+                <section class="panel">
+                    <div class="section-title">
+                        <h2>Ereignisse im nächsten Monat</h2>
+                    </div>
+
+                    <div class="person-inline">
+                        <span class="avatar purple">LW</span>
+                        <div class="fill">
+                            <b>Lena Weber</b>
+                            <p>12. Dezember 2026</p>
+                        </div>
+                        <a class="btn outline small" href="pages/person.html">Profil ansehen</a>
+                    </div>
+
+                    <div class="inset">
+                        <b>Bereits vorgemerkt: Konzertticket</b>
+                        <p>Idee vorhanden, noch nicht besorgt.</p>
+                    </div>
+                </section>
+
+                
+            </div>
+
+            
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Schnellzugriff</h2>
+                </div>
+                <div class="link-grid"><a href="pages/personen.html"><strong>Person anlegen</strong><span>Stammdaten und
+                            Geburtstag</span></a><a href="pages/person.html"><strong>Geschenkidee erfassen</strong><span>Text,
+                            Link und Bild</span></a><a href="pages/geschenke.html"><strong>Alle Geschenke</strong><span>Ideen,
+                            Anlässe und Vorschläge</span></a></div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

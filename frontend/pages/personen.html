@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Statischer Designprototyp eines Geschenke Managers">
+  <title>Personen | Geschenkplan</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="app">
+        <aside class="sidebar">
+            <a href="../index.html" class="brand"><span class="brand-symbol">✳</span><span>Geschenkplan<small>Geschenke im Blick</small></span></a>
+            <div class="nav-caption">NAVIGATION</div>
+            <nav aria-label="Hauptnavigation">
+                <a href="../index.html">
+                    <span aria-hidden="true">◫</span> Übersicht
+                </a>
+                
+                <a href="personen.html" aria-current="page" class="active">
+                    <span aria-hidden="true">♙</span> Personen
+                </a>
+                
+                <a href="person.html">
+                    <span aria-hidden="true">♡</span> Personenprofil
+                </a>
+                
+                <a href="geschenke.html">
+                    <span aria-hidden="true">✧</span> Geschenke & Ideen
+                </a>
+            </nav>
+        </aside>
+
+        <main id="inhalt" class="content">
+            <header class="page-heading">
+                <div>
+                <p class="kicker">GESCHENKE MANAGER</p>
+                <h1>Personen</h1>
+                <p class="subtitle">Alle Kontakte verwalten und neue Personen erfassen.</p>
+                </div>
+            </header>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Personenliste</h2>
+                </div>
+
+                <div class="people-grid">
+                    <a class="person-card" href="person.html"><span class="avatar purple">LW</span></a>
+                    <a class="person-card" href="person.html"><span class="avatar coral">MK</span></a>
+                    <a class="person-card" href="person.html"><span class="avatar teal">SB</span></a>                       </a>
+                </div>
+            </section>
+            <section class="panel">
+                <div class="section-title">
+                    <h2>Neue Person anlegen</h2>
+                </div>
+                <div class="form-grid">
+                    <label>Vorname <input type="text" placeholder="z. B. Marie"></label>
+                    <label>Nachname <input type="text" placeholder="z. B. Müller"></label>
+                    <label>Geburtstag <input type="date"></label>
+                    <label>Beziehung <input type="text" placeholder="z. B. Freundin"></label>
+                    <label class="full">Interessen <input type="text" placeholder="z. B. Musik, Lesen, Reisen"></label>
+                    <label class="full">Weitere Informationen 
+                        <textarea rows="3" placeholder="Notizen, Wünsche, Größen oder Vorlieben">
+                    </textarea></label>
+                </div>
+                <div class="button-row"><button class="btn primary" type="button">Person speichern</button><button
+                    class="btn outline" type="button">Abbrechen</button></div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

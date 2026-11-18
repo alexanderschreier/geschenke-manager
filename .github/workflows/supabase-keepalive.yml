@@ -1,0 +1,28 @@
+name: Supabase Keepalive
+
+# Regelmäßiger Zugriff auf die Supabase-API, damit das kostenlose Projekt
+# nicht wegen Inaktivität pausiert wird. Läuft nur, wenn die Secrets gesetzt sind.
+on:
+  schedule:
+    - cron: "0 6 */3 * *" # alle 3 Tage, 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+    steps:
+      - name: Ping Supabase
+        if: ${{ env.SUPABASE_URL != '' && env.SUPABASE_ANON_KEY != '' }}
+        # TODO: sobald Tabellen existieren, eine kleine Tabelle abfragen,
+        # z. B. "$SUPABASE_URL/rest/v1/<tabelle>?select=id&limit=1"
+        run: |
+          status=$(curl -sS -o /dev/null -w "%{http_code}" "$SUPABASE_URL/rest/v1/" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "Supabase antwortet mit HTTP $status"
+      - name: Hinweis
+        if: ${{ env.SUPABASE_URL == '' || env.SUPABASE_ANON_KEY == '' }}
+        run: echo "SUPABASE_URL / SUPABASE_ANON_KEY noch nicht als Secrets gesetzt, übersprungen."
